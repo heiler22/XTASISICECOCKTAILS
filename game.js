@@ -68,14 +68,14 @@ function generarObjetos() {
       return;
     }
 
-    // 🔹 Aparecen 1 o 2 objetos por oleada
+    // 🔹 1 o 2 objetos por oleada
     const cantidad = 1 + Math.floor(Math.random() * 2);
 
     for (let i = 0; i < cantidad; i++) {
       let tipo, imgUsada;
 
-      // 🔹 55% buenos - 45% malos (hasta 30 malos en total)
-      const probMalo = malosTotales < 30 ? 0.45 : 0;
+      // 🔹 65% malos - 35% buenos (hasta 30 malos en total)
+      const probMalo = malosTotales < 30 ? 0.65 : 0;
       if (Math.random() < probMalo) {
         tipo = "malo";
         malosTotales++;
@@ -126,7 +126,7 @@ function actualizar() {
         puntaje += 10;
         velocidad += 0.1;
       } else {
-        puntaje -= 10; // 💀 ahora solo resta 10 puntos
+        puntaje -= 10; // 💀 malos ahora solo quitan 10 puntos
         velocidad += 0.15;
       }
       objetos.splice(i, 1);
@@ -151,9 +151,9 @@ function finalizarJuego() {
   final.classList.remove("oculto");
 
   let mensaje = "¡Sigue practicando!";
-  if (puntaje >= 150) mensaje = "🔥 ¡Granizado GRATIS! 🔥";
-  else if (puntaje >= 100) mensaje = "¡2x1 en Xtasis Ice!🍸";
-  else if (puntaje >= 50) mensaje = "¡Buen intento! 💪 GANASTE 10% de descuento";
+  if (puntaje >= 150) mensaje = "🔥 ¡Eres una leyenda Xtasis! 🔥";
+  else if (puntaje >= 100) mensaje = "🍸 ¡Premio sorpresa desbloqueado!";
+  else if (puntaje >= 50) mensaje = "¡Buen intento! 💪 Sigue subiendo tu puntaje.";
 
   document.getElementById("mensaje-final").innerText = mensaje;
 }
