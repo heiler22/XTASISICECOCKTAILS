@@ -153,9 +153,13 @@ function finalizarJuego() {
   let mensaje = "¡Sigue practicando!";
   if (puntaje >= 150) mensaje = "🔥 ¡Eres una leyenda Xtasis! 🔥";
   else if (puntaje >= 100) mensaje = "🍸 ¡Premio sorpresa desbloqueado!";
-  else if (puntaje >= 50) mensaje = "¡Buen intento! 💪 Sigue subiendo tu puntaje.";
+  else if (puntaje >= 50) mensaje = "💪 ¡Buen intento! Sigue subiendo tu puntaje.";
 
-  document.getElementById("mensaje-final").innerText = mensaje;
+  // 🧠 Mostrar mensaje + puntaje final
+  document.getElementById("mensaje-final").innerHTML = `
+    <h2>${mensaje}</h2>
+    <p style="font-size:1.5rem; margin-top:10px;">Tu puntaje final fue: <strong>${puntaje}</strong> puntos 🧠</p>
+  `;
 }
 
 /* --- CONTROLES --- */
