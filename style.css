@@ -1,0 +1,40 @@
+body {
+  background: radial-gradient(circle at center, #2b0040, #0d001a);
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.neon-text {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff33ff, 0 0 40px #ff66ff;
+}
+
+.btn-neon {
+  background-color: #ff00ff;
+  color: white;
+  border: none;
+  padding: 0.8em 2em;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #ff00ff;
+  transition: 0.3s;
+}
+.btn-neon:hover {
+  background-color: #ff33ff;
+  box-shadow: 0 0 40px #ff33ff, 0 0 80px #ff00ff;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .btn-neon {
+    font-size: 1rem;
+  }
+}
