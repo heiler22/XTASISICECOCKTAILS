@@ -151,9 +151,9 @@ function finalizarJuego() {
   final.classList.remove("oculto");
 
   let mensaje = "¡Sigue practicando!";
-  if (puntaje >= 150) mensaje = "🔥 ¡Eres una leyenda Xtasis! 🔥";
-  else if (puntaje >= 100) mensaje = "🍸 ¡Premio sorpresa desbloqueado!";
-  else if (puntaje >= 50) mensaje = "💪 ¡Buen intento! Sigue subiendo tu puntaje.";
+  if (puntaje >= 150) mensaje = "🔥 ¡Granizado GRATIS! 🔥";
+  else if (puntaje >= 100) mensaje = "🍸 ¡2x1 en Xtasis Ice!";
+  else if (puntaje >= 50) mensaje = "💪 ¡Buen intento! 10% de descuento";
 
   // 🧠 Mostrar mensaje + puntaje final
   document.getElementById("mensaje-final").innerHTML = `
